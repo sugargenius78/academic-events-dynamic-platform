@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign up</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body  id="background">
+        <form class="signup-box" action="signup.php" method="POST">
+          <h2>Sign Up</h2>
+          <div class="blank">
+            <input type="text" name="username" required placeholder=" ">
+            <label>Username</label>
+          </div>
+          <div class="blank">
+            <input type="text" name="full_name" required placeholder=" ">
+            <label>Full Name</label>
+          </div>
+          <div class="blank">
+            <input type="email" name="email" required placeholder=" ">
+            <label>Email</label>
+          </div>
+          <div class="blank">
+            <input type="password" name="password" required placeholder="">
+            <label>Password</label>
+          </div>
+          <div class="blank">
+            <input type="password" name="confirm_password" required placeholder="">
+            <label>Confirm Password</label>
+          </div>
+          <div class="blank">
+            <label for="role" class="role">Role</label>
+            <select name="role" id="role" required>
+              <option value="student">Student</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <button id="signin" type="submit"><a href="sign.html">Sign Up</a></button>
+          <p class="signup-text">Already have an account? <a href="sign.html">Sign in</a></p>
+        </form>
+
+    </body>
+</html>

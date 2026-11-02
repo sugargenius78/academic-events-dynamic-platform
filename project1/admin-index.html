@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard - Events</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="admin">
+        <style>
+            :root {
+            --primary: #2E3A59;
+            --primary-light: #495677;
+            --primary-dark: #1a2238;
+            --accent: #3F8CFF;
+            --accent-light: #AFCBFF;
+            --success: #4caf50;
+            --gray-dark: #1e1e1e;
+            --gray-medium: #555555;
+            --gray-light: #cccccc;
+            --white: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.15);
+            }
+
+            .admin {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--primary);
+            color: var(--white);
+            }
+
+            .header1 {
+            background-color: var(--primary-dark);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+            .header1 h1 {
+            margin: 0;
+            color: var(--accent);
+            }
+
+            #nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+            }
+
+            #nav a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: bold;
+            }
+
+            #nav a:hover {
+            color: var(--accent-light);
+            }
+
+            .main-content3 {
+            padding: 2rem;
+            }
+
+            .section1 {
+            margin-bottom: 2rem;
+            background-color: var(--primary-light);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 8px var(--shadow-color);
+            }
+
+            h2 {
+            color: var(--accent);
+            margin-top: 0;
+            }
+
+            form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            }
+
+            input[type="text"],
+            input[type="date"],
+            textarea {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: none;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            }
+
+            #button {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 0.75rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            }
+
+            #button:hover {
+            background-color: var(--accent-light);
+            }
+
+            .event-card,
+            .registration-card {
+            background-color: var(--primary-dark);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px var(--shadow-color);
+            }
+            .event-card h3{
+                color: white;
+            }
+        </style>
+    <header class="header1">
+        <h1>Admin Dashboard</h1>
+        <nav id="nav">
+        <ul>
+            <li><a href="#view-events">View Events</a></li>
+            <li><a href="#add-event">Add Event</a></li>
+            <li><a href="sign.html">Log Out</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main class="main-content3">
+        <section id="view-events" class="section1">
+        <h2>Upcoming Events</h2>
+        <div class="events-list">
+            <div class="event-card">
+                <h3>Science Innovation Fair</h3>
+                <p>April 25, 2025</p>
+                <p>Explore the cutting edge of student research and invention!
+                    The Science Innovation Fair showcases over 30 booths featuring exciting projects in AI, renewable energy, robotics, and medical tech.
+                    Visitors will enjoy live demonstrations, meet young innovators, and vote for their favorite invention.
+                </p>
+                <h3>Cultural Day Festival</h3>
+                <p>May 3, 2025</p>
+                <p>Travel the world without leaving campus!
+                    Cultural Day celebrates global diversity through music, dance, food, and traditional fashion from over 15 different countries.
+                    Students are invited to perform, cook, or present their culture in vibrant, interactive booths.
+                </p>
+                <h3>Guest Lecture AI & Future</h3>
+                <p>May 10, 2025</p>
+                <p>Join us for an inspiring talk on how artificial intelligence is shaping the future of education, healthcare, and business.
+                    Dr. Armand will explore both the opportunities and ethical challenges AI presents in a rapidly evolving digital world.
+                </p>
+            </div>
+        </div>
+        </section>
+
+        <section id="add-event" class="section">
+        <h2>Add New Event</h2>
+        <form id="eventForm" action="add_event.php" method="post">
+            <input type="text" name="title" placeholder="Event Title" required>
+            <input type="date" name="event_date" required>
+            <textarea placeholder="Event Description" type="text" name="description" required></textarea>
+            <button type="submit" id="button">Add Event</button>
+        </form>
+        </section>
+
+    </main>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ACADEMIC EVENTS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body id="body">
+    <div class="container1">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Join the Event</h1>
+                <p>Fill out the form below to register your participation and stay updated.</p>
+            </div>
+
+            <form action="submit_form.php" method="POST">
+                <div class="form-section">
+                    <h2>Event Registration Form Fields</h2>
+                    <div class="input-group">
+                        <label for="Full_Name">Full Name</label>
+                        <input type="text" id="Full_Name" name="Full_Name" required />
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email_address">Email Address</label>
+                        <input type="email" id="email_address" name="email_address" required />
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="user_id">Student ID</label>
+                            <input type="number" id="user_id" name="user_id" required />
+                        </div>
+
+                        <div class="input-group">
+                            <label for="Event_Name">Event Name</label>
+                            <input type="text" id="Event_Name" name="Event_Name" required />
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-secondary" id="btn_event" type="submit">Submit</button>
+                <script>
+                    document.getElementById('btn_event').addEventListener('click', function() {
+                    alert("You've been registered successfully");
+                    });
+                </script>
+            </form>
+        </div>
+
+        <div class="impact-sidebar">
+            <h2>Your Impact</h2>
+            <div class="impact-item">
+                <div class="impact-icon">🔧</div>
+                <div class="impact-text">
+                    <h3>Skill Development</h3>
+                    <p>Students gain leadership, communication, and teamwork skills by practicing in events.</p>
+                </div>
+            </div>
+            <div class="impact-item">
+                <div class="impact-icon">🤝</div>
+                <div class="impact-text">
+                    <h3>Networking opportunities</h3>
+                    <p>Engaging in events helps students connect with peers, faculty, and professionals.</p>
+                </div>
+            </div>
+            <div class="impact-item">
+                <div class="impact-icon">🌱</div>
+                <div class="impact-text">
+                    <h3>Personal Growth</h3>
+                    <p>Being involved enriches students' university experience and builds confidence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
